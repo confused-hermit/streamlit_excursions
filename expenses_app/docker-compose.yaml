@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    image: nonameleft/streamlit_expenses
+    container_name: expenses_app
+    ports:
+      - 8501:8501
+    volumes:
+      - .:/code
+    command: streamlit run /code/app.py
+
